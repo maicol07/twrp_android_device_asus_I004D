@@ -26,18 +26,13 @@
 # Inherit from asus sm8250-common
 -include $(COMMON_PATH)/BoardConfigCommon.mk
 
-# Kernel prebuilts
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/$(BOARD_KERNEL_IMAGE_NAME)
-
 # TWRP specific build flags
 TW_FRAMERATE := 120
 TW_LOAD_VENDOR_MODULES := "adsp_loader_dlkm.ko aw8697.ko focaltech_fts_zf.ko msm_drm.ko q6_dlkm.ko swr_dlkm.ko swr_haptics_dlkm.ko texfat.ko tntfs.ko"
-TW_LOAD_VENDOR_MODULES_EXCLUDE_GKI := true
 TW_Y_OFFSET := 25
 TW_H_OFFSET := -25
 TW_CUSTOM_CPU_POS := 180
 TW_CUSTOM_BATTERY_POS := 720
-TW_STATUS_ICONS_ALIGN := center
 
 #
 # For local builds only
