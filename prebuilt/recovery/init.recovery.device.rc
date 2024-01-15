@@ -1,6 +1,10 @@
 
-on property:dev.mnt.blk.firmware=*
-    write /sys/class/leds/vibrator/index 3
+on boot
+    start qti.vibrator
 
-on property:ro.twrp.fastbootd=1
-    write /sys/class/leds/vibrator/index 3
+service qti.vibrator /system/bin/vendor.qti.hardware.vibrator.service
+    user root
+    group root
+    disabled
+    setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib:/system/lib64:/system/lib:/sbin
+    seclabel u:r:recovery:s0

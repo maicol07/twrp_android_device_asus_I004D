@@ -28,11 +28,12 @@
 
 # TWRP specific build flags
 TW_FRAMERATE := 90
-TW_LOAD_VENDOR_MODULES := "adsp_loader_dlkm.ko aw8697.ko focaltech_fts_zf.ko q6_dlkm.ko texfat.ko tntfs.ko"
+TW_LOAD_VENDOR_MODULES := "adsp_loader_dlkm.ko focaltech_fts_zf.ko q6_dlkm.ko texfat.ko"
 TW_Y_OFFSET := 0
 TW_H_OFFSET := 0
 TW_CUSTOM_CPU_POS := 180
 TW_CUSTOM_BATTERY_POS := 720
+TW_SUPPORT_INPUT_AIDL_HAPTICS := true
 
 #
 # For local builds only
